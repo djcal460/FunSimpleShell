@@ -4,7 +4,7 @@
 
 Simple-Shell was developed in c language to demonstrate how processes are forked from the parent and executed in a shell terminal. This cli allows for children to be forked and executed either concurrently by using the '&' at the tail of the command, or the default is to have the parent wait for the child to finish executing. The tricky part was realizing that for concurrent runs with the ampersand specified, I'd have to throw all the noise from stdout and stderr to the null device, so that the parent could get back to the prompt. Afterall, we send that child to the background because we want it to shut up while we continue working. So, in this little nubbin, that child be quiet. 
 
-I'd like to say I thought of this little boo, but tis a homework assignment from Operating System Concepts 9th edition Chapter 3. An additional nub for this project was to implement a history feature much like the one UNIX systems provide (!n runs the Nth command and !! runs the most recent command). And it is implemented as such.  
+This little boo is a homework assignment from Operating System Concepts. They don't provide solutions, so this is my own OG code. An additional nub for this project was to implement a history feature much like the one UNIX systems provide (!n runs the Nth command and !! runs the most recent command). And it is implemented as such.  
 
 ## The Skinny
 This was all accomplished by tokenizing input
